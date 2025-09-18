@@ -1,0 +1,259 @@
+/* Register.css */
+
+/* Container styles */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.register-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.register-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.register-subtitle {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.register-form {
+  padding: 30px 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.form-select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.register-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e53e3e;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-icon {
+  font-size: 18px;
+}
+
+.register-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #718096;
+}
+
+.login-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.form-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.form-group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.form-group:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.form-group:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .register-card {
+    max-width: 100%;
+  }
+  
+  .register-header {
+    padding: 20px 15px;
+  }
+  
+  .register-form {
+    padding: 20px 15px;
+  }
+}
+
+/* Loading state for button */
+.register-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.register-button.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Password strength indicator */
+.password-strength {
+  margin-top: 5px;
+  height: 5px;
+  border-radius: 3px;
+  background: #eee;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.strength-weak {
+  background: #e53e3e;
+  width: 33%;
+}
+
+.strength-medium {
+  background: #d69e2e;
+  width: 66%;
+}
+
+.strength-strong {
+  background: #38a169;
+  width: 100%;
+}
