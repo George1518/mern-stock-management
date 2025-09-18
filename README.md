@@ -50,8 +50,8 @@ This project was created as a demo to showcase full-stack fundamentals such as a
 
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/mern-stock-management.git
+git clone https://github.com/george1518/mern-stock-management.git
 cd mern-stock-management
 
-git clone https://github.com/yourusername/mern-stock-management.git
+git clone https://github.com/george1518/mern-stock-management.git
 cd mern-stock-management
